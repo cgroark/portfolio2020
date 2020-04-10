@@ -1,0 +1,190 @@
+
+$base-plum: #53213E;
+$base-black: #333;
+$hover-black: #555;
+$max-width: 1300px;
+$transition: 0.5s;
+
+.navigation{
+  background-color: transparent;
+  padding: 5px 10px;
+  text-align: right;
+  position: absolute;
+  width: 100%;
+  div{
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    ul{
+      list-style: none;
+      padding: 0;
+      li{
+        display: inline;
+        .nav-link{
+          padding: 3px 15px 5px;
+          margin-right: 4px;
+          text-decoration: none;
+          color: #fff;
+          display: inline-block;
+          font-size: 20px;
+          transition: $transition;
+        }
+        .nav-link.active{
+            border-bottom: 3px solid #fff;
+        }
+        .nav-link:hover{
+          background: $base-plum;
+          color: white;
+        }
+      }
+    }
+    
+  }
+}
+#tech-images{
+  div{
+    max-width: 130px;
+    display: inline-block;
+    padding: 10px 20px;
+    p{
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+  }
+}
+img{
+  max-width: 100%;
+}
+.main-body{
+  margin: auto;
+  max-width: $max-width;
+  padding: 0 20px;
+  min-height: 50vh;
+  padding-top: 50px;
+}
+.App-logo {
+  height: 4vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.other-heading, .App-header{
+  background-image: url(./images/ferns.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.other-heading{
+  height: 160px;
+  div{
+    padding: 100px 20px 0;
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.App-header {
+  height: 100vh;
+  div{
+    text-align: center;
+    border: solid 1px #fff;
+    margin: calc(60vh - 237px) auto 0;
+    max-width: $max-width;
+    padding: 50px;
+    h1{
+      margin: 0;
+      font-weight: 100;
+      // padding-top: calc(50vh - 95px);
+    }
+  }
+}
+.projects{
+  h1{
+    background: $base-plum;
+    padding: 20px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  .col-md-6:first-of-type div{
+    border-left: 6px solid #53213E;
+    padding-left: 20px;
+  }
+  .col-md-6:nth-of-type(2) div{
+    border-right: 6px solid #53213E;
+    padding-right: 20px;
+  }
+  .col-md-6{
+    margin-bottom: 40px;
+    div{
+      height: 100%;
+      padding: 15px;
+      -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+    }
+    a {
+      text-align: center;
+      color: $base-black;
+      img{
+        display: block;
+        margin: auto;
+      }
+      img:hover{
+        transform: scale(1.03);
+        transition-duration: $transition;
+      }
+    }
+    a:hover{
+      text-decoration: none;
+    }
+    a p:hover{
+      color: $hover-black;
+    }
+    img{
+      display: block;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+  }
+  .projects-nav{
+    text-align: center;
+    button{
+      background: transparent;
+      border: none;
+      -webkit-appearance: button;
+      font-size: 34px;
+      color: $base-plum;
+      padding: 0 20px;
+      margin: 0 8px 20px;
+      border-bottom: 3px solid transparent;
+    }
+    button.active-projects{
+      background-color: $base-plum;
+      color: #fff;
+    }
+    button:hover{
+      border-bottom: solid 3px $base-plum;
+      transition: $transition;
+    }
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
