@@ -9,7 +9,9 @@ import node from '../images/node.png';
 import reactLogo from '../images/react.png'
 
 class About extends React.Component {
-    
+    componentDidMount = () =>{
+        this.props.pathname(window.location.pathname)
+    }
     render(){
         return(
             <article>

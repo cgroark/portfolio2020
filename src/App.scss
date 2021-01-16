@@ -2,9 +2,27 @@
 $base-plum: #53213E;
 $base-black: #333;
 $hover-black: #555;
-$max-width: 1300px;
+$bluish: #4A7794;
+$max-width: 1200px;
 $transition: 0.5s;
-
+.home-navigation{
+  list-style: none;
+  padding: 0;
+  li{
+    display: inline-block;
+    padding: 25px;
+    a{
+      color: #fff;
+      padding: 3px 15px 5px;
+      transition: $transition;
+      &:hover{
+        background: $base-plum;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}
 .navigation{
   background-color: transparent;
   padding: 5px 10px;
@@ -29,13 +47,13 @@ $transition: 0.5s;
           display: inline-block;
           font-size: 20px;
           transition: $transition;
-        }
-        .nav-link.active{
+          &:hover{
+            background: $base-plum;
+            color: white;
+          }
+          &.active{
             border-bottom: 3px solid #fff;
-        }
-        .nav-link:hover{
-          background: $base-plum;
-          color: white;
+          }
         }
       }
     }
@@ -109,29 +127,32 @@ img{
     }
   }
 }
-.projects{
+.projects {
   h1{
     background: $base-plum;
     padding: 20px;
     color: white;
     margin-bottom: 20px;
   }
-  .col-md-6:first-of-type div{
-    border-left: 6px solid #53213E;
-    padding-left: 20px;
-  }
-  .col-md-6:nth-of-type(2) div{
-    border-right: 6px solid #53213E;
-    padding-right: 20px;
-  }
-  .col-md-6{
+  .project-each.col-md-6:first-of-type {
     margin-bottom: 40px;
-    div{
+    > div{
+      border-left: 6px solid #53213E;
+      padding-left: 20px;
+    }
+  }
+  .project-each.col-md-6:nth-of-type(2) {
+    margin-bottom: 40px;
+    > div{
+      border-right: 6px solid #53213E;
+      padding-right: 20px;
+    }
+  }
+  .project-each.col-md-6 > div{
       height: 100%;
       padding: 15px;
       -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
       box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
-    }
     a {
       text-align: center;
       color: $base-black;
@@ -180,11 +201,253 @@ img{
 }
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*weather app*/
+
+.project-each h3{
+  color: $base-plum;
+}
+
+input{
+  max-width: 80%;
+  background-color: inherit;
+  border: none;
+  font-size: 31px;
+  border-bottom: 2px solid $hover-black;
+  margin: -25px auto 20px;
+  display: block;
+}
+input:focus{
+    outline: none;
+}
+::placeholder{
+  font-size: 24px;
+}
+hr{
+  width: 80%;
+  display: inline-block;
+  border-color: $base-plum;
+}
+.forecast-date{
+  font-size: 23px;
+  background-color: $bluish;
+  color: white;
+  padding: 10px 0;
+}
+.forecast-high{
+  font-size: 18px;
+  font-weight:900;
+}
+.forecast-low{
+  font-size: 16px;
+}
+.weather-div{
+  margin-top: 8%;
+  width: 100%;
+  background-color: #fff;
+  display: inline-block;
+  min-height: 119px;
+}
+.current-weather{
+  height: 195px;
+  color: $hover-black;
+}
+#city{
+  margin: -50px 0 20px;
+  font-size:28px;
+  text-align: center;
+}
+#delete{
+  z-index: 99;
+  color: $base-plum;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  top: -72px;
+  right: -387px;
+  font-size: 26px;
+  font-weight: 700;
+}
+#mag-icon {
+  color: $base-plum;
+  font-size: 20px;
+  display: inline;
+  margin-right: 25px;
+  background-color: inherit;
+  border: none;
+}
+#mag-icon, #delete:hover{
+  cursor: pointer;
+}
+#current-temp{
+  font-size: 95px;
+  bottom: 30px;
+  font-weight: 100;
+  left: 15%;
+  position: relative;
+  display: flex;
+}
+#temp-f{
+  position: relative;
+  display: flex;
+  left: 37%;
+  font-size: 26px;
+  margin-top: -122px;
+}
+#current-desc{
+  position: relative;
+  display: flex;
+  left: 45%;
+  margin-bottom: -76px;
+  font-size: 30px;
+}
+#humidity{
+  position: relative;
+  display: flex;
+  left: 45%;
+  font-size: 22px;
+
+}
+.icon{
+  margin-bottom: -27px;
+  height: 70px;
+}
+.forecast{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  background-color: white;
+}
+.forecast-each{
+  text-align: center;
+  border-right: 0.5px dashed $hover-black;
+  width: 19.5%;
+}
+.forecast-each:last-of-type{
+  border-right: none;
+}
+@media only screen and (max-width: 1020px) {
+  #delete{
+    right: -320px;
   }
-  to {
-    transform: rotate(360deg);
+  #mag-icon {
+    margin-right: 5px;
+  }
+  #current-temp{
+    font-size: 90px;
+    bottom: 38px;
+    left: 10%;
+  }
+  #temp-f {
+    margin-top: -123px;
+    left: 41%;
+  }
+  #current-desc{
+    margin-bottom: -64px;
+    font-size: 20px;
+  }
+  #current-desc, #humidity{
+    left: 51%;
+  }
+}
+@media only screen and (max-width: 860px) and (min-width: 768px){
+  #delete{
+    right: -290px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #current-temp{
+    font-size: 90px;
+    bottom: 38px;
+    left: 25%;
+  }
+  #temp-f {
+    margin-top: -123px;
+    left: 45%;
+  }
+  #current-desc{
+    margin-bottom: -64px;
+    font-size: 20px;
+  }
+  #current-desc, #humidity{
+    left: 51%;
+  }
+
+}
+@media only screen and (max-width: 560px) {
+  #current-temp{
+    font-size: 90px;
+    bottom: 38px;
+    left: 15%;
+  }
+  #temp-f {
+    margin-top: -123px;
+    left: 40%;
+  }
+  #current-desc{
+    margin-bottom: -64px;
+    font-size: 20px;
+  }
+  #current-desc, #humidity{
+    left: 51%;
+  }
+
+}
+@media only screen and (max-width: 520px) {
+  #current-temp{
+    font-size: 95px;
+    bottom: 30px;
+    left: 15%;
+  }
+  #temp-f {
+    margin-top: -148px;
+  }
+  #temp-f, #humidity,#current-desc  {
+    left: 48%;
+  }
+  #delete{
+    right: -300px;
+  }
+  #mag-icon {
+    margin-right: 0px;
+  }
+  ::placeholder{
+    font-size: 20px;
+  }
+  input{
+    width: 70%;
+    padding: 0 20px;
+  }
+  .forecast-date {
+    font-size: 20px;
+  }
+  .current-weather{
+    height: 205px;
+  }
+  #city{
+    margin: -20px 0 10px 0;
+    font-size:22px;
+  }
+}
+@media only screen and (max-width: 499px) {
+  #current-temp{
+    bottom: 20px;
+    left: 5%;
+  }
+  #temp-f {
+    margin-top: -134px;
+  }
+  #temp-f, #humidity,#current-desc  {
+    left: 44%;
+  }
+  #delete{
+    right: -200px;
+  }
+  .forecast-date, .forecast-high, .forecast-low {
+    font-size: 14px;
+  }
+  .icon {
+    margin-bottom: -20px;
+    height: 50px;
   }
 }

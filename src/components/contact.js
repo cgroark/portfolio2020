@@ -2,7 +2,9 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
 class Contact extends React.Component {
-    
+    componentDidMount = () =>{
+        this.props.pathname(window.location.pathname)
+    }
     render(){
         return(
             <article>
