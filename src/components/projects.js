@@ -4,8 +4,9 @@ import carbonCommute2 from '../images/carbon-commute2.png';
 import liveSite from '../images/livesite.png';
 import recycles from '../images/react_recycle_rates.gif';
 import lottery from '../images/comment-lottery.gif';
-import books from '../images/Book-Ends.png';
+import books from '../images/bookends-update.png'; 
 import WeatherSearch from './WeatherSearch';
+import PaceYourself from './PaceYourself';
 require('dotenv').config();
 
 class Projects extends React.Component {
@@ -65,28 +66,9 @@ class Projects extends React.Component {
                                     <div>
                                     <h2>Book Ends</h2>
                                     <p>Track the books you're reading, find new books, find your friends' books.</p>
-                                    <p><strong>Technologies:</strong> React, HTML5, CSS3, JavaScript, Google Books API, Google Sheets API</p>
+                                    <p><strong>Technologies:</strong> React, HTML5, SASS, JavaScript, Google Books API, Google Sheets API</p>
                                     <img src={books} alt="screenshot of a website showing two graphs of commuting behavior" />
-                                    <a href="https://tranquil-springs-32438.herokuapp.com/" target="_blank"><img src={liveSite} alt="icon of pc screen with code element" /><p>Visit live site</p></a>
-                                   </div>
-                            </Col>
-                            <Col md={6} className="project-each">
-                                    <div>
-                                    <h2>Comment Lottery</h2>
-                                    <p>Built to improve the public meeting comment process, Comment Lottery assigns ticket numbers to would-be commenters, creates a randomized queue, and lets the user easily manage commenters through the queue.</p>
-                                    <p><strong>Technologies:</strong> React, HTML5, CSS3, JavaScript, Google Sheets API</p>
-                                    <img src={lottery} alt="screenshot of a website showing a button pressing and updating a queue of tickets" />
-                                   </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col md={6} className="project-each">
-                                    <div>
-                                    <h2>Book Ends</h2>
-                                    <p>Track the books you're reading, find new books, find your friends' books.</p>
-                                    <p><strong>Technologies:</strong> React, HTML5, CSS3, JavaScript, Google Books API, Google Sheets API</p>
-                                    <img src={books} alt="screenshot of a website showing two graphs of commuting behavior" />
-                                    <a href="https://tranquil-springs-32438.herokuapp.com/" target="_blank"><img src={liveSite} alt="icon of pc screen with code element" /><p>Visit live site</p></a>
+                                    <a href="http://www.bookends.design" target="_blank"><img src={liveSite} alt="icon of pc screen with code element" /><p>Visit live site</p></a>
                                    </div>
                             </Col>
                             <Col md={6} className="project-each">
@@ -94,8 +76,21 @@ class Projects extends React.Component {
                                     <h2>Weather Check</h2>
                                     <WeatherSearch />
                                 </div>
+                                <div>
+                                    <h2>Pace Yourself</h2>
+                                    <PaceYourself />
+                                </div>
                             </Col>
+                            {/* <Col md={6} className="project-each">
+                                    <div>
+                                    <h2>Comment Lottery</h2>
+                                    <p>Built to improve the public meeting comment process, Comment Lottery assigns ticket numbers to would-be commenters, creates a randomized queue, and lets the user easily manage commenters through the queue.</p>
+                                    <p><strong>Technologies:</strong> React, HTML5, CSS3, JavaScript, Google Sheets API</p>
+                                    <img src={lottery} alt="screenshot of a website showing a button pressing and updating a queue of tickets" />
+                                   </div>
+                            </Col> */}
                         </Row>
+   
                      
                     </div>
                     }
