@@ -134,6 +134,13 @@ img{
     color: white;
     margin-bottom: 20px;
   }
+  .project-each h3{
+    background-color: #53213E;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+  }
   .project-each.col-md-6:first-of-type {
     margin-bottom: 40px;
     > div{
@@ -203,24 +210,30 @@ img{
 
 /*weather app*/
 
-.project-each h3{
-  color: $base-plum;
-}
 
-input{
-  max-width: 80%;
-  background-color: inherit;
-  border: none;
-  font-size: 31px;
-  border-bottom: 2px solid $hover-black;
-  margin: -25px auto 20px;
-  display: block;
-}
-input:focus{
-    outline: none;
-}
-::placeholder{
-  font-size: 24px;
+.weather-div{
+  background-color: #fff;
+  min-height: 119px;
+  margin-top: 10px;
+  h3{
+    color: $base-plum;
+  }
+  form{
+    input{
+      background-color: inherit;
+      border: none;
+      font-size: 31px;
+      border-bottom: 2px solid $hover-black;
+      margin: 0 0 0 10px;
+    }
+    input:focus{
+        outline: none;
+    }
+    ::placeholder{
+      font-size: 24px;
+    }
+  }
+ 
 }
 hr{
   width: 80%;
@@ -240,12 +253,8 @@ hr{
 .forecast-low{
   font-size: 16px;
 }
-.weather-div{
-  margin-top: 8%;
-  width: 100%;
-  background-color: #fff;
-  display: inline-block;
-  min-height: 119px;
+#weather-results{
+  margin-top: 60px;
 }
 .current-weather{
   height: 195px;
@@ -257,21 +266,18 @@ hr{
   text-align: center;
 }
 #delete{
-  z-index: 99;
-  color: $base-plum;
   background-color: transparent;
   border: none;
-  position: relative;
-  top: -72px;
-  right: -387px;
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 700
 }
 #mag-icon {
   color: $base-plum;
-  font-size: 20px;
-  display: inline;
-  margin-right: 25px;
+  font-size: 26px;
   background-color: inherit;
   border: none;
 }
@@ -450,4 +456,81 @@ hr{
     margin-bottom: -20px;
     height: 50px;
   }
+}
+/*runform*/
+#paceyourself{
+  text-align: center;
+    background-color: #282c34;
+    padding: 0 20px 20px; 
+  h1, h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    padding-top: 50px;
+    font-family: 'Permanent Marker', cursive;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+  }
+  img{
+    width: 25%;
+    padding-top: 10px;
+  }
+  button, label, select, input{
+    font-size: 20px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  button, input[type="submit"]{
+      background-color: #6FACA5;
+      border: solid 3px #282c34;
+      padding: 10px 15px;
+      margin: 10px 10px;
+      display: inline-block;
+  }
+  button:hover, input[type="submit"]:hover{
+    border: solid 3px #6FACA5;
+  }
+  .required-alert{
+    background-color: #EFCD69;
+    width: 200px;
+    margin: 10px auto;
+    padding: 3px 3px 5px;
+  }
+  .required-alert p{
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+  }
+  label{
+    color: white;
+    display: inline-block;
+    margin: 20px 10px 10px 0;
+  }
+  .result{
+    background-color: #C4C0B4;
+    max-width: 595px;
+    padding: 20px;
+    margin: auto;
+  }
+  .result h2 {
+    margin: 0;
+    color: #111;
+    padding: 0;
+  }
+  .result h2 span{
+    color: #E64B15;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 48px;
+  }
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
 }

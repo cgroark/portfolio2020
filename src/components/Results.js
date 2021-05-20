@@ -43,7 +43,7 @@ class Results extends Component{
 		let currentF = Math.round(current.main.temp * (9/5) -459.67);
 		let currentCity = this.props.forecast.city.name;
 		return(
-			<div>
+			<div id="weather-results">
 				<div className='current-weather'>
 					<p id="city">Current weather in {currentCity}</p>
 					<span id='current-temp'>{currentF}</span>

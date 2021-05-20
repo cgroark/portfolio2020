@@ -15,7 +15,7 @@ class Projects extends React.Component {
         this.state={
             reactProjects: true,
             nodeProjects: false,
-            vizProjects: false
+            cmsProjects: false
         }
     }
     componentDidMount = () =>{
@@ -25,25 +25,25 @@ class Projects extends React.Component {
         this.setState({
             reactProjects: !this.state.reactProjects,
             nodeProjects: false,
-            vizProjects: false
+            cmsProjects: false
         })
     }
     toggleNode = () => {
         this.setState({
             reactProjects: false,
             nodeProjects: !this.state.nodeProjects,
-            vizProjects: false
+            cmsProjects: false
         })
     }
     toggleData = () => {
         this.setState({
             reactProjects: false,
             nodeProjects: false,
-            vizProjects: !this.state.vizProjects
+            cmsProjects: !this.state.cmsProjects
         })
     }
     render(){
-        const { reactProjects, nodeProjects, vizProjects } = this.state;
+        const { reactProjects, nodeProjects, cmsProjects } = this.state;
         return(
             <article>
                 <div className="other-heading">
@@ -55,7 +55,7 @@ class Projects extends React.Component {
                     <div className="projects-nav">
                         <button disabled={reactProjects} className={reactProjects ? "active-projects" : ""} onClick={this.toggleReact}>React</button>
                         <button disabled={nodeProjects} className={nodeProjects ? "active-projects" : ""} onClick={this.toggleNode}>Node.js</button>
-                        <button disabled={vizProjects} className={vizProjects ? "active-projects" : ""} onClick={this.toggleData}>Data Visualization</button>
+                        <button disabled={cmsProjects} className={cmsProjects ? "active-projects" : ""} onClick={this.toggleData}>CMS</button>
                     </div>
                
                     {reactProjects &&
@@ -65,30 +65,31 @@ class Projects extends React.Component {
                             <Col md={6} className="project-each">
                                     <div>
                                     <h2>Book Ends</h2>
-                                    <p>Track the books you're reading, find new books, find your friends' books.</p>
+                                    <p>Track the books you're reading, find new books, see your friends' reading list.</p>
                                     <p><strong>Technologies:</strong> React, HTML5, SASS, JavaScript, Google Books API, Google Sheets API</p>
-                                    <img src={books} alt="screenshot of a website showing two graphs of commuting behavior" />
                                     <a href="http://www.bookends.design" target="_blank"><img src={liveSite} alt="icon of pc screen with code element" /><p>Visit live site</p></a>
+                                    <img src={books} alt="screenshot of a website recent book updates and bestsellers" />
+                                   
                                    </div>
                             </Col>
                             <Col md={6} className="project-each">
                                 <div>
-                                    <h2>Weather Check</h2>
-                                    <WeatherSearch />
-                                </div>
-                                <div>
                                     <h2>Pace Yourself</h2>
+                                    <p>Set goals and get raceday pace guidance.</p>
+                                    <p><strong>Technologies:</strong> React, HTML5, CSS3, JavaScript, Regex</p>
+                                    <h3>Try the live demo below</h3>
                                     <PaceYourself />
                                 </div>
+                                <div>
+                                    <h2>Weather Check</h2>
+                                    <p>Check the weather in your area.</p>
+                                    <p><strong>Technologies:</strong> React, HTML5, CSS3, JavaScript, Regex, Open Weather Map API</p>
+                                    <h3>Try the live demo below</h3>
+                                    <WeatherSearch />
+                                    
+                                </div>
                             </Col>
-                            {/* <Col md={6} className="project-each">
-                                    <div>
-                                    <h2>Comment Lottery</h2>
-                                    <p>Built to improve the public meeting comment process, Comment Lottery assigns ticket numbers to would-be commenters, creates a randomized queue, and lets the user easily manage commenters through the queue.</p>
-                                    <p><strong>Technologies:</strong> React, HTML5, CSS3, JavaScript, Google Sheets API</p>
-                                    <img src={lottery} alt="screenshot of a website showing a button pressing and updating a queue of tickets" />
-                                   </div>
-                            </Col> */}
+                           
                         </Row>
    
                      
@@ -115,26 +116,19 @@ class Projects extends React.Component {
                             </Row>
                         </div>
                     }
-                    {vizProjects &&
-                        <div id="data-viz">
-                            <h1>Data Visualization</h1>
+                    {cmsProjects &&
+                        <div id="cms">
+                            <h1>CMS</h1>
                             <Row>
                                 <Col md={6}>
                                     <div>
-                                    <h2>Carbon Commute</h2>
-                                    <p>Track, log and chart carbon emissions of trips travelled based on distance and mode of transport</p>
-                                    <p><strong>Technologies:</strong> Node.js/Express, Chart.js, PostgreSQL, Sequelize, RESTful API, JavaScript, JQuery, HTML5, CSS3, Bootstrap, Google Maps API</p>
-                                    <img src={carbonCommute2} alt="screenshot of a website showing two graphs of commuting behavior" />
-                                    <a href="https://carbon-commute.herokuapp.com/" target="_blank"><img src={liveSite} alt="icon of pc screen with code element" /><p>Visit live site</p></a>
+                                    one
                                    </div>
                                 </Col>
                             
                                 <Col md={6}>
                                     <div>
-                                        <h2>Seattle Recycles</h2>
-                                        <p>Access Seattle Recycling Rates via Socrata Open Source Data API. Select range and see two data visualizations of recycling rates over selected timeframe.</p>
-                                        <p><strong>Technologies:</strong> React, Recharts, JavaScript, HTML5, CSS3, Socrata Open Source Data API</p>
-                                        <img src={recycles} alt="moving image of graphs showing changing recycling rates in Seattle in various years" />
+                                        two
                                     </div>
 
                                 </Col>

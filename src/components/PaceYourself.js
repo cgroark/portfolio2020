@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import run from '../images/run.png';
+import Runform from './runform'
 
 
 class PaceYourself extends Component {
@@ -12,8 +14,10 @@ class PaceYourself extends Component {
 	render() {
 		
 		return(
-			<div>
-				<p>Content</p>
+			<div id="paceyourself">
+				<img src={run} alt="logo" />
+				<h1>Pace Yourself.</h1>
+				<Runform />
 			</div>
 			)
 	}

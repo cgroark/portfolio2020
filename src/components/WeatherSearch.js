@@ -25,9 +25,11 @@ class WeatherSearch extends Component {
 	}
 
 	handleChange = (e) => {
-		this.setState({
-			zip: e.target.value
-		})
+		if(e.target.value.match("^[0-9|:]*$")!=null ){
+			this.setState({
+				zip: e.target.value
+			})
+		}
 	}
 
 	handleSubmit = (e) => {
@@ -58,14 +60,21 @@ class WeatherSearch extends Component {
 		const {weather, forecast, search, zip} = this.state;	
 		return(
 			<div className='weather-div'>
-				<form type='input'  onSubmit={this.handleSubmit}>
-					<button type='submit' id='mag-icon'><FontAwesomeIcon icon={faSearch} /></button>
-					<input placeholder='Enter your zip code' value={this.state.zip} onChange={this.handleChange}></input>
-					
-				</form>
 				{forecast && zip.length > 0 &&
 					<button id='delete' onClick={this.handleDelete}>x</button>
 				}
+				<form type='input'  onSubmit={this.handleSubmit}>
+					
+					<input 
+						placeholder='Enter your zip code' 
+						value={this.state.zip} 
+						onChange={this.handleChange} 
+						maxLength="5" 
+					/>
+					<button type='submit' id='mag-icon'><i class="fa fa-search" aria-hidden="true"></i></button>
+			
+				</form>
+				
 				{search && weather.cod === '404' &&
 					<h3>No matching zip found</h3>
 				}
