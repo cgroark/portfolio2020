@@ -3,6 +3,9 @@ $base-plum: #53213E;
 $base-black: #333;
 $hover-black: #555;
 $bluish: #4A7794;
+$light-grey:  #e9ecef;
+$seaform: #6FACA5;
+$lightpink: #ffb6c163;
 $max-width: 1200px;
 $transition: 0.5s;
 .home-navigation{
@@ -134,24 +137,37 @@ img{
     color: white;
     margin-bottom: 20px;
   }
-  .project-each h3{
-    background-color: #53213E;
-    color: #fff;
-    font-size: 20px;
-    padding: 5px;
-    text-align: center;
+  .project-each {
+    .tech-section{
+      background-color: $light-grey;
+      padding: 15px;
+      margin-bottom: 15px;
+      text-align: center;
+      p{
+        margin-bottom: 0;
+        font-size: 1.2rem;
+      }
+    }
+    h3{
+      background-color: $base-plum;
+      color: #fff;
+      font-size: 20px;
+      padding: 5px;
+      text-align: center;
+    }
   }
+  
   .project-each.col-md-6:first-of-type {
     margin-bottom: 40px;
     > div{
-      border-left: 6px solid #53213E;
+      border-left: 6px solid $base-plum;
       padding-left: 20px;
     }
   }
   .project-each.col-md-6:nth-of-type(2) {
     margin-bottom: 40px;
     > div{
-      border-right: 6px solid #53213E;
+      border-right: 6px solid $base-plum;
       padding-right: 20px;
     }
   }
@@ -211,12 +227,26 @@ img{
 /*weather app*/
 
 
-.weather-div{
-  background-color: #fff;
-  min-height: 119px;
+.projects .project-each .weather-div{
+  background-color: $lightpink;
+  padding: 20px;
   margin-top: 10px;
+  > h1{
+    background-color: transparent;
+    color: black;
+    font-size: 1.8em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
+    img{
+      display: inline;
+      max-width: 70px;
+    }
+  }
   h3{
-    color: $base-plum;
+    border-bottom: solid 4px #6FACA5;
+    color: black;
+    background-color: transparent;
   }
   form{
     input{
@@ -225,7 +255,14 @@ img{
       font-size: 31px;
       border-bottom: 2px solid $hover-black;
       margin: 0 0 0 10px;
+      width: 85%;
+      text-align: center;
+      transition: 1s;
     }
+    input:hover{
+      background-color: $light-grey;
+      transition: 1s;
+  }
     input:focus{
         outline: none;
     }
@@ -254,17 +291,48 @@ hr{
   font-size: 16px;
 }
 #weather-results{
-  margin-top: 60px;
-}
+  h4{
+    background-color: #6FACA5;
+    text-align: center;
+    padding: 10px;
+    margin: 5px 10px 10px;
+  }
 .current-weather{
-  height: 195px;
-  color: $hover-black;
+  background-color: $light-grey;
+  padding: 20px;
+  margin: 20px 10px;
+  border-radius: 6px;
+  
+  #city{
+    margin: 0;
+    font-size:2em;
+    text-align: center;
+    color: $base-plum;
+  }
+  #current-temp{
+    font-size: 95px;
+    font-weight: 100;
+    sup{
+      font-size: 26px;
+      top: -1.5em;
+    }
+  }
+  
+  #current-desc{
+    margin-top: 30px;
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  #humidity{
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+  .col-md-6{
+    text-align: center;
+  }
 }
-#city{
-  margin: -50px 0 20px;
-  font-size:28px;
-  text-align: center;
 }
+
 #delete{
   background-color: transparent;
   border: none;
@@ -284,35 +352,7 @@ hr{
 #mag-icon, #delete:hover{
   cursor: pointer;
 }
-#current-temp{
-  font-size: 95px;
-  bottom: 30px;
-  font-weight: 100;
-  left: 15%;
-  position: relative;
-  display: flex;
-}
-#temp-f{
-  position: relative;
-  display: flex;
-  left: 37%;
-  font-size: 26px;
-  margin-top: -122px;
-}
-#current-desc{
-  position: relative;
-  display: flex;
-  left: 45%;
-  margin-bottom: -76px;
-  font-size: 30px;
-}
-#humidity{
-  position: relative;
-  display: flex;
-  left: 45%;
-  font-size: 22px;
 
-}
 .icon{
   margin-bottom: -27px;
   height: 70px;
@@ -323,6 +363,7 @@ hr{
   justify-content: center;
   padding: 0;
   background-color: white;
+  margin: 0 10px;
 }
 .forecast-each{
   text-align: center;
@@ -361,102 +402,24 @@ hr{
     right: -290px;
   }
 }
+@media only screen and (min-width: 768px) {
+  #weather-results{
+    .col-md-6:first-of-type{
+      text-align: right;
+    }
+    .col-md-6:nth-of-type(2){
+      text-align: left;
+    }
+  }
+}
 @media only screen and (max-width: 768px) {
   #current-temp{
-    font-size: 90px;
-    bottom: 38px;
-    left: 25%;
+    font-size: 50px;
+    margin-bottom: 0;
   }
-  #temp-f {
-    margin-top: -123px;
-    left: 45%;
-  }
-  #current-desc{
-    margin-bottom: -64px;
-    font-size: 20px;
-  }
-  #current-desc, #humidity{
-    left: 51%;
-  }
+}
 
-}
-@media only screen and (max-width: 560px) {
-  #current-temp{
-    font-size: 90px;
-    bottom: 38px;
-    left: 15%;
-  }
-  #temp-f {
-    margin-top: -123px;
-    left: 40%;
-  }
-  #current-desc{
-    margin-bottom: -64px;
-    font-size: 20px;
-  }
-  #current-desc, #humidity{
-    left: 51%;
-  }
 
-}
-@media only screen and (max-width: 520px) {
-  #current-temp{
-    font-size: 95px;
-    bottom: 30px;
-    left: 15%;
-  }
-  #temp-f {
-    margin-top: -148px;
-  }
-  #temp-f, #humidity,#current-desc  {
-    left: 48%;
-  }
-  #delete{
-    right: -300px;
-  }
-  #mag-icon {
-    margin-right: 0px;
-  }
-  ::placeholder{
-    font-size: 20px;
-  }
-  input{
-    width: 70%;
-    padding: 0 20px;
-  }
-  .forecast-date {
-    font-size: 20px;
-  }
-  .current-weather{
-    height: 205px;
-  }
-  #city{
-    margin: -20px 0 10px 0;
-    font-size:22px;
-  }
-}
-@media only screen and (max-width: 499px) {
-  #current-temp{
-    bottom: 20px;
-    left: 5%;
-  }
-  #temp-f {
-    margin-top: -134px;
-  }
-  #temp-f, #humidity,#current-desc  {
-    left: 44%;
-  }
-  #delete{
-    right: -200px;
-  }
-  .forecast-date, .forecast-high, .forecast-low {
-    font-size: 14px;
-  }
-  .icon {
-    margin-bottom: -20px;
-    height: 50px;
-  }
-}
 /*runform*/
 #paceyourself{
   text-align: center;
@@ -484,14 +447,14 @@ hr{
     font-family: 'Orbitron', sans-serif;
   }
   button, input[type="submit"]{
-      background-color: #6FACA5;
+      background-color: $seaform;
       border: solid 3px #282c34;
       padding: 10px 15px;
       margin: 10px 10px;
       display: inline-block;
   }
   button:hover, input[type="submit"]:hover{
-    border: solid 3px #6FACA5;
+    border: solid 3px $seaform;
   }
   .required-alert{
     background-color: #EFCD69;

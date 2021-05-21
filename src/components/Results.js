@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Row, Col } from 'react-bootstrap';
 
 class Forecast extends Component {
 	render(){
@@ -45,13 +46,21 @@ class Results extends Component{
 		return(
 			<div id="weather-results">
 				<div className='current-weather'>
-					<p id="city">Current weather in {currentCity}</p>
-					<span id='current-temp'>{currentF}</span>
-					<span id="temp-f"><sup>o </sup>F</span>
-					<p id='current-desc'>{current.weather[0].description}</p>
-					<p id='humidity'>{current.main.humidity}% Humidity</p>
+				<p id="city">Current weather in {currentCity}</p>
+					<Row>
+						<Col md={6}>
+						<p id='current-temp'>{currentF}<sup>o F</sup></p>
+						
+						</Col>
+						<Col md={6}>
+						<p id='current-desc'>{current.weather[0].description}</p>
+						<p id='humidity'>{current.main.humidity}% Humidity</p>
+						</Col>
+					</Row>
 				</div>
+				<h4>{currentCity} 5-Day Forecast</h4>
 				<div className='forecast'>
+				
 					{forecast}
 				</div>
 

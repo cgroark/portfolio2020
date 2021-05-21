@@ -5,6 +5,7 @@ import liveSite from '../images/livesite.png';
 import recycles from '../images/react_recycle_rates.gif';
 import lottery from '../images/comment-lottery.gif';
 import books from '../images/bookends-update.png'; 
+import booksOne from '../images/bookends-1.png';
 import WeatherSearch from './WeatherSearch';
 import PaceYourself from './PaceYourself';
 require('dotenv').config();
@@ -66,9 +67,9 @@ class Projects extends React.Component {
                                     <div>
                                     <h2>Book Ends</h2>
                                     <p>Track the books you're reading, find new books, see your friends' reading list.</p>
-                                    <p><strong>Technologies:</strong> React, HTML5, SASS, JavaScript, Google Books API, Google Sheets API</p>
+                                    <div className='tech-section'><p><strong>React, HTML5, SASS, JavaScript, Google Books API, Google Sheets API</strong> </p></div>
                                     <a href="http://www.bookends.design" target="_blank"><img src={liveSite} alt="icon of pc screen with code element" /><p>Visit live site</p></a>
-                                    <img src={books} alt="screenshot of a website recent book updates and bestsellers" />
+                                    <img src={booksOne} alt="screenshot of a website recent book updates and bestsellers" />
                                    
                                    </div>
                             </Col>
@@ -76,14 +77,14 @@ class Projects extends React.Component {
                                 <div>
                                     <h2>Pace Yourself</h2>
                                     <p>Set goals and get raceday pace guidance.</p>
-                                    <p><strong>Technologies:</strong> React, HTML5, CSS3, JavaScript, Regex</p>
+                                    <div className='tech-section'><p><strong> React, HTML5, CSS3, JavaScript, Regex</strong></p></div>
                                     <h3>Try the live demo below</h3>
                                     <PaceYourself />
                                 </div>
                                 <div>
                                     <h2>Weather Check</h2>
                                     <p>Check the weather in your area.</p>
-                                    <p><strong>Technologies:</strong> React, HTML5, CSS3, JavaScript, Regex, Open Weather Map API</p>
+                                    <div className='tech-section'><p><strong> React, HTML5, CSS3, JavaScript, Regex, Open Weather Map API</strong></p></div>
                                     <h3>Try the live demo below</h3>
                                     <WeatherSearch />
                                     

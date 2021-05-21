@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import Results from './Results';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import thunder from '../images/thunderbolt.png';
 let key = process.env.REACT_APP_API;
 
 class WeatherSearch extends Component {
@@ -59,7 +60,9 @@ class WeatherSearch extends Component {
 	render() {
 		const {weather, forecast, search, zip} = this.state;	
 		return(
+		
 			<div className='weather-div'>
+				<h1><img src={thunder} alt="icon of thunder could and sun and lightning" />&nbsp; Weather Check</h1>
 				{forecast && zip.length > 0 &&
 					<button id='delete' onClick={this.handleDelete}>x</button>
 				}
