@@ -39,11 +39,12 @@ class App extends React.Component {
                     <NavLink className="nav-link" exact activeClassName="active" to="/">Home</NavLink>
                   </li>
                   <li>
-                    <NavLink className="nav-link" exact activeClassName="active" to="/projects">Recent Work</NavLink>
-                  </li>
-                  <li>
                     <NavLink className="nav-link" exact activeClassName="active" to="/about">About</NavLink>
                   </li>
+                  <li>
+                    <NavLink className="nav-link" exact activeClassName="active" to="/projects">Recent Work</NavLink>
+                  </li>
+                  
                   <li>
                     <NavLink className="nav-link" exact activeClassName="active" to="/contact" >Contact</NavLink>
                   </li>

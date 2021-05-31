@@ -5,6 +5,10 @@ import liveSite from '../images/livesite.png';
 import recycles from '../images/react_recycle_rates.gif';
 import lottery from '../images/comment-lottery.gif';
 import books from '../images/bookends-update.png'; 
+import avOne from '../images/av-1.png';
+import avTwo from '../images/av-2.png';
+import pse from '../images/pse-1.png';
+import sr522 from '../images/sr522.png';
 import booksOne from '../images/bookends-1.png';
 import WeatherSearch from './WeatherSearch';
 import PaceYourself from './PaceYourself';
@@ -65,24 +69,24 @@ class Projects extends React.Component {
                         <Row>
                             <Col md={6} className="project-each">
                                     <div>
-                                    <h2>Book Ends</h2>
+                                    <h2 className="project-title">Book Ends</h2>
                                     <p>Track the books you're reading, find new books, see your friends' reading list.</p>
                                     <div className='tech-section'><p><strong>React, HTML5, SASS, JavaScript, Google Books API, Google Sheets API</strong> </p></div>
-                                    <a href="http://www.bookends.design" target="_blank"><img src={liveSite} alt="icon of pc screen with code element" /><p>Visit live site</p></a>
-                                    <img src={booksOne} alt="screenshot of a website recent book updates and bestsellers" />
+                                    <a href="http://www.bookends.design" target="_blank">Visit live site&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                    <img className="sample-image" src={booksOne} alt="screenshot of a website recent book updates and bestsellers" />
                                    
                                    </div>
                             </Col>
                             <Col md={6} className="project-each">
                                 <div>
-                                    <h2>Pace Yourself</h2>
+                                    <h2 className="project-title">Pace Yourself</h2>
                                     <p>Set goals and get raceday pace guidance.</p>
                                     <div className='tech-section'><p><strong> React, HTML5, CSS3, JavaScript, Regex</strong></p></div>
                                     <h3>Try the live demo below</h3>
                                     <PaceYourself />
                                 </div>
                                 <div>
-                                    <h2>Weather Check</h2>
+                                    <h2 className="project-title">Weather Check</h2>
                                     <p>Check the weather in your area.</p>
                                     <div className='tech-section'><p><strong> React, HTML5, CSS3, JavaScript, Regex, Open Weather Map API</strong></p></div>
                                     <h3>Try the live demo below</h3>
@@ -100,19 +104,22 @@ class Projects extends React.Component {
                         <div id="node">
                             <h1>Node.js</h1>
                             <Row>
-                                <Col md={6}>
-                                    <div>
-                                    <h2>Carbon Commute</h2>
-                                    <p>Track, log and chart carbon emissions of trips travelled based on distance and mode of transport</p>
-                                    <p><strong>Technologies:</strong> Node.js/Express, Chart.js, PostgreSQL, Sequelize, RESTful API, JavaScript, JQuery, HTML5, CSS3, Bootstrap, Google Maps API</p>
-                                    <a href="https://carbon-commute.herokuapp.com/" target="_blank"><img src={liveSite} alt="icon of pc screen with code element" /><p>Visit live site</p></a>
-                                    </div>
-                                </Col>
-                            
-                                <Col md={6}>
-                                    <div>
-                                        <img src={carbonCommute2} alt="screenshot of a website showing two graphs of commuting behavior" />
-                                    </div>
+                                <Col md={12} className="project-each">
+                                    <Row>
+                                        <Col md={6} >
+                                            <div>
+                                                <h2 className="project-title">Carbon Commute</h2>
+                                                <p>Track, log and chart carbon emissions of trips travelled based on distance and mode of transport</p>
+                                                <div className='tech-section'><p><strong>Node.js/Express, Chart.js, PostgreSQL, Sequelize, RESTful API, JavaScript, JQuery, HTML5, CSS3, Bootstrap, Google Maps API</strong> </p></div>
+                                                <a href="https://carbon-commute.herokuapp.com/" target="_blank">Visit live site&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                            </div>
+                                        </Col>
+                                        <Col md={6} >
+                                            <div>
+                                                <img className="sample-image" src={carbonCommute2} alt="screenshot of a website showing two graphs of commuting behavior" />
+                                            </div>
+                                        </Col>
+                                    </Row>
                                 </Col>
                             </Row>
                         </div>
@@ -121,19 +128,37 @@ class Projects extends React.Component {
                         <div id="cms">
                             <h1>CMS</h1>
                             <Row>
-                                <Col md={6}>
+                            <Col md={6} className="project-each">
+                                <div>
+                                    <h2 className="project-title">PSE Integrated Resource Planning</h2>
+                                    <p>Built for Puget Sound Energy (PSE) to inform the public on ongoing analysis around how a range of potential future outcomes could affect PSE’s ability to meet our customers’ electric and natural gas supply needs. </p>
+                                    <div className='tech-section'><p><strong>Orchard Content Management System (CMS), HTML5, CSS3, JavaScript, JQuery</strong> </p></div>
+                                    <a href="https://pse-irp.participate.online/" target="_blank">Visit live site&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                    <img  className="sample-image"src={pse} alt="screenshot of a website text" />
+                                </div>
+                                <div>
+                                    <h2 className="project-title">Sound Transit corridor map</h2>
+                                    <p>Built for Sound Transit to provide users an interactive map of the Sr 522/NE 145th Bus Rapid Transit corridor as design alternatives are considered.</p>
+                                    <div className='tech-section'><p><strong>Orchard Content Management System (CMS), HTML5, CSS3, JavaScript, JQuery, Google Maps API</strong> </p></div>
+                                    <img  className="sample-image"src={sr522} alt="screenshot of a website with a map" />
+                                    
+                                </div>
+                            </Col>
+                            <Col md={6} className="project-each">
                                     <div>
-                                    one
+                                    <h2 className="project-title">Autonomous Vehicles Workgroup</h2>
+                                    <p>Built for Washington State Transportation Commission to provide updates on the arrival of autonomous vehicles in the State </p>
+                                    <div className='tech-section'><p><strong>Orchard Content Management System (CMS), HTML5, CSS3, JavaScript, JQuery</strong> </p></div>
+                                    <a href="https://avworkgroupwa.org/" target="_blank">Visit live site&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                    <img  className="sample-image"src={avTwo} alt="screenshot of a website text" />
+                                    
+                                    <img  className="sample-image"src={avOne} alt="screenshot of a website with a banner image" />
+                                    
+                                   
                                    </div>
-                                </Col>
-                            
-                                <Col md={6}>
-                                    <div>
-                                        two
-                                    </div>
-
-                                </Col>
-                            </Row>
+                            </Col>
+                           
+                        </Row>
                         </div>
                     }
                 </div> 

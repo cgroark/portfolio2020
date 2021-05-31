@@ -6,8 +6,29 @@ $bluish: #4A7794;
 $light-grey:  #e9ecef;
 $seaform: #6FACA5;
 $lightpink: #ffb6c163;
+$darkgreen: #34493A;
 $max-width: 1200px;
 $transition: 0.5s;
+$font-1:'Raleway', sans-serif;
+$font-2: 'Quicksand', sans-serif;
+
+.App{
+  h1, h2, h3{
+    font-family: $font-1;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  p.lead{
+    font-size: 1.5rem;
+  }
+  p, a{
+    font-family: $font-2;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #000;
+  }
+}
 .home-navigation{
   list-style: none;
   padding: 0;
@@ -18,10 +39,12 @@ $transition: 0.5s;
       color: #fff;
       padding: 3px 15px 5px;
       transition: $transition;
+      border-bottom: 2px solid white;
       &:hover{
         background: $base-plum;
         color: white;
         text-decoration: none;
+        border-bottom: none;
       }
     }
   }
@@ -63,9 +86,12 @@ $transition: 0.5s;
     
   }
 }
-#tech-images{
+.tech-images{
+    background-color: $light-grey;
+    padding: 15px;
+    margin-bottom: 15px;
   div{
-    max-width: 130px;
+    max-width: 140px;
     display: inline-block;
     padding: 10px 20px;
     p{
@@ -84,17 +110,43 @@ img{
   padding: 0 20px;
   min-height: 50vh;
   padding-top: 50px;
-}
-.App-logo {
-  height: 4vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  #about{
+    hr{
+      width: 30%;
+      border-top: 4px solid $base-plum;
+      margin-top: 0;
+      margin-bottom: .5rem;
+    }
+    img{
+      display: block;
+      margin: 0 auto 20px;
+    }
+    h3{
+      margin: 20px 0;
+    }
+  }
+  #contact{
+    text-align: center;
+    hr{
+      width: 100%;
+      border-top: 2px solid $light-grey;
+      margin-top: 0;
+      margin-bottom: .5rem;
+    }
+    .col-md-4 img{
+      max-width: 150px;
+      display: block;
+      margin: 20px auto;
+      transition: $transition;
+      &:hover{
+        transition: $transition;
+        transform: scale(1.09);
+      }
+    }
+    
   }
 }
+
 .other-heading, .App-header{
   background-image: url(./images/ferns.jpeg);
   background-size: cover;
@@ -117,16 +169,24 @@ img{
 }
 .App-header {
   height: 100vh;
-  div{
+  padding: 0 20px;
+  > div{
     text-align: center;
-    border: solid 1px #fff;
-    margin: calc(60vh - 237px) auto 0;
+    border: solid 3px #fff;
     max-width: $max-width;
     padding: 50px;
+    margin: 30px auto;
     h1{
       margin: 0;
       font-weight: 100;
-      // padding-top: calc(50vh - 95px);
+    }
+  }
+  div div a img{
+    margin: 5px 15px;
+    transition: $transition;
+    &:hover{
+      transition: $transition;
+      transform: scale(1.09);
     }
   }
 }
@@ -137,27 +197,7 @@ img{
     color: white;
     margin-bottom: 20px;
   }
-  .project-each {
-    .tech-section{
-      background-color: $light-grey;
-      padding: 15px;
-      margin-bottom: 15px;
-      text-align: center;
-      p{
-        margin-bottom: 0;
-        font-size: 1.2rem;
-      }
-    }
-    h3{
-      background-color: $base-plum;
-      color: #fff;
-      font-size: 20px;
-      padding: 5px;
-      text-align: center;
-    }
-  }
-  
-  .project-each.col-md-6:first-of-type {
+  .project-each.col-md-6:first-of-type, .project-each.col-md-12:first-of-type {
     margin-bottom: 40px;
     > div{
       border-left: 6px solid $base-plum;
@@ -171,33 +211,59 @@ img{
       padding-right: 20px;
     }
   }
-  .project-each.col-md-6 > div{
+  .project-each.col-md-12{
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .project-each.col-md-6 > div, .project-each.col-md-12 > div{
       margin-bottom: 20px;
       padding: 15px;
-      -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
-      box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
-    a {
+      -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.34), 0 1px 18px 0 rgba(0,0,0,0.32), 0 3px 5px -1px rgba(0,0,0,0.3);
+      box-shadow: 0 6px 10px 0 rgba(0,0,0,0.34), 0 1px 18px 0 rgba(0,0,0,0.32), 0 3px 5px -1px rgba(0,0,0,0.3);
+    .tech-section{
+      background-color: $light-grey;
+      padding: 15px;
+      margin-bottom: 15px;
       text-align: center;
-      color: $base-black;
-      img{
-        display: block;
-        margin: auto;
-      }
-      img:hover{
-        transform: scale(1.03);
-        transition-duration: $transition;
+      p{
+        margin-bottom: 0;
+        font-size: 1.2rem;
       }
     }
-    a:hover{
-      text-decoration: none;
+    p{
+      text-align: center;
+      font-size: 1.2rem;
     }
-    a p:hover{
-      color: $hover-black;
+    h3, a{
+      background-color: $base-plum;
+      color: #fff;
+      font-size: 20px;
+      padding: 5px 0 8px 0;
+      text-align: center;
+      display: block;
+    }
+    a{
+      border: 2px solid #fff;
+      margin-bottom: 10px;
+      font-weight: 500;
+      &:hover{
+        text-decoration: none;
+        border: 2px solid $base-plum;
+      }
+    }
+    h2.project-title{
+      text-align: center;
+      font-size: 2.2rem;
+      color: $darkgreen;
+      padding: 5px 0 8px 0;
     }
     img{
       display: block;
       margin: auto;
       margin-bottom: 10px;
+      &.sample-image{
+        border: solid 1px lightgrey;
+      }
     }
   }
   .projects-nav{
@@ -222,6 +288,22 @@ img{
     }
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .App-header > div {
+    margin: calc(60vh - 337px) auto 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .home-navigation li {
+    display: inline-block;
+    padding: 15px;
+  }
+  .App h1{
+    font-size: 2.7rem;
+  }
+}
+
 
 
 /*weather app*/
@@ -416,6 +498,11 @@ hr{
   #current-temp{
     font-size: 50px;
     margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .projects .project-each .weather-div form input {
+    width: 65%;
   }
 }
 

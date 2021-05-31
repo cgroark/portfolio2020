@@ -1,3 +1,22 @@
+.App h1, .App h2, .App h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+.App h1 {
+  font-size: 3rem;
+}
+
+.App p.lead {
+  font-size: 1.5rem;
+}
+
+.App p, .App a {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #000;
+}
+
 .home-navigation {
   list-style: none;
   padding: 0;
@@ -13,12 +32,14 @@
   padding: 3px 15px 5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  border-bottom: 2px solid white;
 }
 
 .home-navigation li a:hover {
   background: #53213E;
   color: white;
   text-decoration: none;
+  border-bottom: none;
 }
 
 .navigation {
@@ -65,13 +86,19 @@
   border-bottom: 3px solid #fff;
 }
 
-#tech-images div {
-  max-width: 130px;
+.tech-images {
+  background-color: #e9ecef;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.tech-images div {
+  max-width: 140px;
   display: inline-block;
   padding: 10px 20px;
 }
 
-#tech-images div p {
+.tech-images div p {
   text-align: center;
   font-weight: 400;
   font-size: 1.3rem;
@@ -89,16 +116,46 @@ img {
   padding-top: 50px;
 }
 
-.App-logo {
-  height: 4vmin;
-  pointer-events: none;
+.main-body #about hr {
+  width: 30%;
+  border-top: 4px solid #53213E;
+  margin-top: 0;
+  margin-bottom: .5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    -webkit-animation: App-logo-spin infinite 20s linear;
-            animation: App-logo-spin infinite 20s linear;
-  }
+.main-body #about img {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.main-body #about h3 {
+  margin: 20px 0;
+}
+
+.main-body #contact {
+  text-align: center;
+}
+
+.main-body #contact hr {
+  width: 100%;
+  border-top: 2px solid #e9ecef;
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+.main-body #contact .col-md-4 img {
+  max-width: 150px;
+  display: block;
+  margin: 20px auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main-body #contact .col-md-4 img:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
 }
 
 .other-heading, .App-header {
@@ -131,19 +188,33 @@ img {
 
 .App-header {
   height: 100vh;
+  padding: 0 20px;
 }
 
-.App-header div {
+.App-header > div {
   text-align: center;
-  border: solid 1px #fff;
-  margin: calc(60vh - 237px) auto 0;
+  border: solid 3px #fff;
   max-width: 1200px;
   padding: 50px;
+  margin: 30px auto;
 }
 
-.App-header div h1 {
+.App-header > div h1 {
   margin: 0;
   font-weight: 100;
+}
+
+.App-header div div a img {
+  margin: 5px 15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.App-header div div a img:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
 }
 
 .projects h1 {
@@ -153,31 +224,11 @@ img {
   margin-bottom: 20px;
 }
 
-.projects .project-each .tech-section {
-  background-color: #e9ecef;
-  padding: 15px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.projects .project-each .tech-section p {
-  margin-bottom: 0;
-  font-size: 1.2rem;
-}
-
-.projects .project-each h3 {
-  background-color: #53213E;
-  color: #fff;
-  font-size: 20px;
-  padding: 5px;
-  text-align: center;
-}
-
-.projects .project-each.col-md-6:first-of-type {
+.projects .project-each.col-md-6:first-of-type, .projects .project-each.col-md-12:first-of-type {
   margin-bottom: 40px;
 }
 
-.projects .project-each.col-md-6:first-of-type > div {
+.projects .project-each.col-md-6:first-of-type > div, .projects .project-each.col-md-12:first-of-type > div {
   border-left: 6px solid #53213E;
   padding-left: 20px;
 }
@@ -191,42 +242,70 @@ img {
   padding-right: 20px;
 }
 
-.projects .project-each.col-md-6 > div {
+.projects .project-each.col-md-12 {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.projects .project-each.col-md-6 > div, .projects .project-each.col-md-12 > div {
   margin-bottom: 20px;
   padding: 15px;
-  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.34), 0 1px 18px 0 rgba(0, 0, 0, 0.32), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.34), 0 1px 18px 0 rgba(0, 0, 0, 0.32), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
 }
 
-.projects .project-each.col-md-6 > div a {
+.projects .project-each.col-md-6 > div .tech-section, .projects .project-each.col-md-12 > div .tech-section {
+  background-color: #e9ecef;
+  padding: 15px;
+  margin-bottom: 15px;
   text-align: center;
-  color: #333;
 }
 
-.projects .project-each.col-md-6 > div a img {
+.projects .project-each.col-md-6 > div .tech-section p, .projects .project-each.col-md-12 > div .tech-section p {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.projects .project-each.col-md-6 > div p, .projects .project-each.col-md-12 > div p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.projects .project-each.col-md-6 > div h3, .projects .project-each.col-md-6 > div a, .projects .project-each.col-md-12 > div h3, .projects .project-each.col-md-12 > div a {
+  background-color: #53213E;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px 0 8px 0;
+  text-align: center;
   display: block;
-  margin: auto;
 }
 
-.projects .project-each.col-md-6 > div a img:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+.projects .project-each.col-md-6 > div a, .projects .project-each.col-md-12 > div a {
+  border: 2px solid #fff;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
-.projects .project-each.col-md-6 > div a:hover {
+.projects .project-each.col-md-6 > div a:hover, .projects .project-each.col-md-12 > div a:hover {
   text-decoration: none;
+  border: 2px solid #53213E;
 }
 
-.projects .project-each.col-md-6 > div a p:hover {
-  color: #555;
+.projects .project-each.col-md-6 > div h2.project-title, .projects .project-each.col-md-12 > div h2.project-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #34493A;
+  padding: 5px 0 8px 0;
 }
 
-.projects .project-each.col-md-6 > div img {
+.projects .project-each.col-md-6 > div img, .projects .project-each.col-md-12 > div img {
   display: block;
   margin: auto;
   margin-bottom: 10px;
+}
+
+.projects .project-each.col-md-6 > div img.sample-image, .projects .project-each.col-md-12 > div img.sample-image {
+  border: solid 1px lightgrey;
 }
 
 .projects .projects-nav {
@@ -253,6 +332,22 @@ img {
   border-bottom: solid 3px #53213E;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media only screen and (min-width: 600px) {
+  .App-header > div {
+    margin: calc(60vh - 337px) auto 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-navigation li {
+    display: inline-block;
+    padding: 15px;
+  }
+  .App h1 {
+    font-size: 2.7rem;
+  }
 }
 
 /*weather app*/
@@ -483,6 +578,12 @@ hr {
   #current-temp {
     font-size: 50px;
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projects .project-each .weather-div form input {
+    width: 65%;
   }
 }
 
