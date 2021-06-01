@@ -35,6 +35,7 @@ class About extends React.Component {
                     <Row>
                         <Col md={8}>
                         <h2>Web Developer, Seattle</h2>
+                        <hr></hr>
                         </Col>
                     </Row>
                     <Row>
