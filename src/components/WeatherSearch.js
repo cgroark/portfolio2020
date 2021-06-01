@@ -62,7 +62,7 @@ class WeatherSearch extends Component {
 		return(
 		
 			<div className='weather-div'>
-				<h1><img src={thunder} alt="icon of thunder could and sun and lightning" />&nbsp; Weather Check</h1>
+				<img src={thunder} alt="icon of thunder could and sun and lightning" />
 				{forecast && zip.length > 0 &&
 					<button id='delete' onClick={this.handleDelete}>x</button>
 				}

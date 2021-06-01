@@ -358,17 +358,9 @@ img{
   background-color: $lightpink;
   padding: 20px;
   margin-top: 10px;
-  > h1{
-    background-color: transparent;
-    color: black;
-    font-size: 1.8em;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    text-align: center;
-    img{
+  > img{
       display: inline;
       max-width: 70px;
-    }
   }
   h3{
     border-bottom: solid 4px #6FACA5;
@@ -628,11 +620,14 @@ hr{
     form{
       input{
         font-size: 1.5rem;
-        width: 70%;
+        width: 65%;
       }
       ::placeholder{
         font-size: .8rem;
       }
+    }
+    #mag-icon{
+     font-size: 1rem;
     }
     #weather-results {
       h4{
@@ -643,9 +638,13 @@ hr{
           font-size: 1.2em;
         }
         #current-temp {
-          font-size: 2.5rem;
+          font-size: 2rem;
           font-weight: 100;
           margin-top: 10px;
+          sup{
+            top: -1.2em;
+            font-size: .8rem;
+          }
         }
         #current-desc {
           margin-top: 0;
