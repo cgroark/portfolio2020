@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import css from '../images/css.png'
 import graphql from '../images/graphql.png';
@@ -17,6 +18,8 @@ import orchard from '../images/orchard-logo-black.png';
 import uswds from '../images/uswds.png'; 
 import analytics from '../images/Analytics.png'; 
 import azure from '../images/azure.png';
+import restfulapi from '../images/RESTful-API-logo-for-light-bg.png';
+import resume from '../documents/GroarkColin_Resume_2021.pdf'
 
 class About extends React.Component {
     componentDidMount = () =>{
@@ -40,12 +43,17 @@ class About extends React.Component {
                     </Row>
                     <Row>
                         <Col md={8} >
-                            <p class="lead">I'm a full-stack web developer with experience building online tools and developing and maintaining mobile-optimized and accessible websites. </p>
+                            <p className="lead">I'm a full-stack web developer who builds and maintains online tools and websites with a particular focus on mobile-optimization and accessibility. </p>
                             <hr></hr>
-                            <p>I've worked with an array of organizations and public sector clients to build websites, surveys, and interactive maps to facilitate stakeholder engagement in community projects. With experience executing all stages of web development, a quick overview of skills include: web hosting, deployment, frontend and backend web development, web design, Git and version control, accessibility, CMS building and maintenance, mobile optimization, Google Analytics, browser and device testing, and a solid understanding of HTML5, CSS3, and JavaScript.</p>
+                            <p>I work with clients to build websites, surveys, and interactive maps that facilitate stakeholder engagement in community projects. To ensure equitable access, I keep accessibility and mobile responsiveness top of mind when designing and building products. With experience executing all stages of web development, a summary of skills includes: web hosting, deployment, frontend and backend web development, RESTful APIs, web design, Git and version control, accessibility, CMS building and maintenance, mobile optimization, Google Analytics, browser and device testing, and a solid understanding of HTML5, CSS3, and JavaScript. I've also stepped into the role of product manager for custom CRM software and the planning and delivery of client websites. </p>
+                           
                         </Col>
                         <Col md={4}>
                             <img src={self} alt="headshot of colin groark, web developer" />
+                            <div id="about-links">
+                                <p><a href={resume} target="_blank">Check out my resume&nbsp;<i className="fa fa-external-link" aria-hidden="true"></i></a></p>
+                                <p><Link to={'/projects'}>See some recent work&nbsp;<i className="fa fa-code" aria-hidden="true"></i></Link></p>
+                            </div>
                         </Col>
                     </Row>
                     <Row>
@@ -87,8 +95,8 @@ class About extends React.Component {
                             <p>node.js</p>
                         </div>
                         <div>
-                            <img src={orchard} alt="" />
-                            <p>Orchard CMS</p>
+                            <img src={restfulapi} alt="" />
+                            <p>RESTful API</p>
                         </div>
                         <div>
                             <img src={wordpress} alt="" />

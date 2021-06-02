@@ -123,7 +123,27 @@ img{
     }
     h3{
       margin: 20px 0;
+      background-color: $base-plum;
+      color: #fff;
+      padding: 8px;
     }
+    #about-links {
+      margin: 40px 0;
+      a {
+        background-color: $darkgreen;
+        padding: 10px 15px;
+        color: white;
+        font-size: 1.4rem;
+        border: solid 2px white;
+        display: block;
+        text-align: center;
+        &:hover{
+          border: solid 2px $darkgreen;
+          text-decoration: none;
+        }
+      }
+      
+  }
   }
   #contact{
     text-align: center;

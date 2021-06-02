@@ -72,7 +72,7 @@ class Projects extends React.Component {
                                     <h2 className="project-title">Book Ends</h2>
                                     <p>Track the books you're reading, find new books, see your friends' reading list.</p>
                                     <div className='tech-section'><p><strong>React, HTML5, SASS, JavaScript, Google Books API, Google Sheets API</strong> </p></div>
-                                    <a href="http://www.bookends.design" target="_blank">Visit live site&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                    <a href="http://www.bookends.design" target="_blank">Visit live site&nbsp;<i className="fa fa-external-link" aria-hidden="true"></i></a>
                                     <img className="sample-image" src={booksOne} alt="screenshot of a website recent book updates and bestsellers" />
                                    
                                    </div>
@@ -111,7 +111,7 @@ class Projects extends React.Component {
                                                 <h2 className="project-title">Carbon Commute</h2>
                                                 <p>Track, log and chart carbon emissions of trips travelled based on distance and mode of transport</p>
                                                 <div className='tech-section'><p><strong>Node.js/Express, Chart.js, PostgreSQL, Sequelize, RESTful API, JavaScript, JQuery, HTML5, CSS3, Bootstrap, Google Maps API</strong> </p></div>
-                                                <a href="https://carbon-commute.herokuapp.com/" target="_blank">Visit live site&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                                <a href="https://carbon-commute.herokuapp.com/" target="_blank">Visit live site&nbsp;<i className="fa fa-external-link" aria-hidden="true"></i></a>
                                             </div>
                                         </Col>
                                         <Col md={6} >
@@ -133,7 +133,7 @@ class Projects extends React.Component {
                                     <h2 className="project-title">PSE Integrated Resource Planning</h2>
                                     <p>Built for Puget Sound Energy (PSE) to inform the public on ongoing analysis around how a range of potential future outcomes could affect PSE’s ability to meet our customers’ electric and natural gas supply needs. </p>
                                     <div className='tech-section'><p><strong>Orchard Content Management System (CMS), HTML5, CSS3, JavaScript, JQuery</strong> </p></div>
-                                    <a href="https://pse-irp.participate.online/" target="_blank">Visit live site&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                    <a href="https://pse-irp.participate.online/" target="_blank">Visit live site&nbsp;<i className="fa fa-external-link" aria-hidden="true"></i></a>
                                     <img  className="sample-image"src={pse} alt="screenshot of a website text" />
                                 </div>
                                 <div>
@@ -149,7 +149,7 @@ class Projects extends React.Component {
                                     <h2 className="project-title">Autonomous Vehicles Workgroup</h2>
                                     <p>Built for Washington State Transportation Commission to provide updates on the arrival of autonomous vehicles in the State </p>
                                     <div className='tech-section'><p><strong>Orchard Content Management System (CMS), HTML5, CSS3, JavaScript, JQuery</strong> </p></div>
-                                    <a href="https://avworkgroupwa.org/" target="_blank">Visit live site&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                    <a href="https://avworkgroupwa.org/" target="_blank">Visit live site&nbsp;<i className="fa fa-external-link" aria-hidden="true"></i></a>
                                     <img  className="sample-image"src={avTwo} alt="screenshot of a website text" />
                                     
                                     <img  className="sample-image"src={avOne} alt="screenshot of a website with a banner image" />

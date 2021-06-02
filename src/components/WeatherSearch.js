@@ -74,7 +74,7 @@ class WeatherSearch extends Component {
 						onChange={this.handleChange} 
 						maxLength="5" 
 					/>
-					<button type='submit' id='mag-icon'><i class="fa fa-search" aria-hidden="true"></i></button>
+					<button type='submit' id='mag-icon'><i className="fa fa-search" aria-hidden="true"></i></button>
 			
 				</form>
 				

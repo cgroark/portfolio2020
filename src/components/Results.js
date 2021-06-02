@@ -34,10 +34,8 @@ class Results extends Component{
   					max: fiveDay[i+1].main.temp,
   					icon:fiveDay[i+1].weather[0].icon
   				})
-  			}
-  		}
-  		console.log('forecastData',forecastData)
-  		
+			  }
+  		}  		
   		const forecast = forecastData.map(each => {
 			return <Forecast key={each.date} dt={each.date} min={each.min} max={each.max} icon={each.icon} />
 		})
@@ -58,7 +56,7 @@ class Results extends Component{
 						</Col>
 					</Row>
 				</div>
-				<h4>{currentCity} 5-Day Forecast</h4>
+				<h4>{currentCity} Forecast</h4>
 				<div className='forecast'>
 				
 					{forecast}
