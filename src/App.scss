@@ -600,6 +600,9 @@ hr{
       margin: 10px 10px;
       display: inline-block;
   }
+  input[type="text"]{
+    width: 100%;
+  }
   button:hover, input[type="submit"]:hover{
     border: solid 3px $seaform;
   }
