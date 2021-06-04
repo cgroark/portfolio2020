@@ -195,7 +195,7 @@ img{
     border: solid 3px #fff;
     max-width: $max-width;
     padding: 50px;
-    margin: 30px auto;
+    margin: 50px auto;
     h1{
       margin: 0;
       font-weight: 100;
@@ -218,14 +218,12 @@ img{
     margin-bottom: 20px;
   }
   .project-each.col-md-6:first-of-type, .project-each.col-md-12:first-of-type {
-    margin-bottom: 40px;
     > div{
       border-left: 6px solid $base-plum;
       padding-left: 20px;
     }
   }
   .project-each.col-md-6:nth-of-type(2) {
-    margin-bottom: 40px;
     > div{
       border-right: 6px solid $base-plum;
       padding-right: 20px;
@@ -310,10 +308,18 @@ img{
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .App-header > div {
-    margin: calc(60vh - 337px) auto 0;
+    margin: 200px auto 0;
   }
+}
+@media only screen and (max-width: 768px) {
+  .projects .project-each.col-md-6 {
+      > div{
+        border-left: 6px solid $base-plum;
+        border-right: 6px solid $base-plum;
+      }
+    }
 }
 @media only screen and (max-width: 600px) {
   .main-body{
