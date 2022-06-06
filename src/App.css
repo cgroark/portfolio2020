@@ -33,6 +33,7 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-bottom: 2px solid white;
+  text-decoration: none;
 }
 
 .home-navigation li a:hover {
@@ -147,6 +148,7 @@ img {
   border: solid 2px white;
   display: block;
   text-align: center;
+  text-decoration: none;
 }
 
 .main-body #about #about-links a:hover {
@@ -292,6 +294,7 @@ img {
   padding: 5px 0 8px 0;
   text-align: center;
   display: block;
+  text-decoration: none;
 }
 
 .projects .project-each.col-md-6 > div a, .projects .project-each.col-md-12 > div a {
@@ -414,237 +417,6 @@ img {
   }
 }
 
-/*weather app*/
-.projects .project-each .weather-div {
-  background-color: #ffb6c163;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-.projects .project-each .weather-div > img {
-  display: inline;
-  max-width: 70px;
-}
-
-.projects .project-each .weather-div h3 {
-  border-bottom: solid 4px #6FACA5;
-  color: black;
-  background-color: transparent;
-}
-
-.projects .project-each .weather-div form input {
-  background-color: inherit;
-  border: none;
-  font-size: 31px;
-  border-bottom: 2px solid #555;
-  margin: 0 0 0 10px;
-  width: 85%;
-  text-align: center;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.projects .project-each .weather-div form input:hover {
-  background-color: #e9ecef;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.projects .project-each .weather-div form input:focus {
-  outline: none;
-}
-
-.projects .project-each .weather-div form ::-webkit-input-placeholder {
-  font-size: 24px;
-}
-
-.projects .project-each .weather-div form :-ms-input-placeholder {
-  font-size: 24px;
-}
-
-.projects .project-each .weather-div form ::-ms-input-placeholder {
-  font-size: 24px;
-}
-
-.projects .project-each .weather-div form ::placeholder {
-  font-size: 24px;
-}
-
-hr {
-  width: 80%;
-  display: inline-block;
-  border-color: #53213E;
-}
-
-.forecast-date {
-  font-size: 23px;
-  background-color: #4A7794;
-  color: white;
-  padding: 10px 0;
-}
-
-.forecast-high {
-  font-size: 18px;
-  font-weight: 900;
-}
-
-.forecast-low {
-  font-size: 16px;
-}
-
-#weather-results h4 {
-  background-color: #6FACA5;
-  text-align: center;
-  padding: 10px;
-  margin: 5px 10px 10px;
-}
-
-#weather-results .current-weather {
-  background-color: #e9ecef;
-  padding: 20px;
-  margin: 20px 10px;
-  border-radius: 6px;
-}
-
-#weather-results .current-weather #city {
-  margin: 0;
-  font-size: 2em;
-  text-align: center;
-  color: #53213E;
-}
-
-#weather-results .current-weather #current-temp {
-  font-size: 95px;
-  font-weight: 100;
-}
-
-#weather-results .current-weather #current-temp sup {
-  font-size: 26px;
-  top: -1.5em;
-}
-
-#weather-results .current-weather #current-desc {
-  margin-top: 30px;
-  font-size: 30px;
-  margin-bottom: 0;
-}
-
-#weather-results .current-weather #humidity {
-  font-size: 22px;
-  margin-bottom: 0;
-}
-
-#weather-results .current-weather .col-md-6 {
-  text-align: center;
-}
-
-#delete {
-  background-color: transparent;
-  border: none;
-  display: block;
-  width: 100%;
-  text-align: right;
-  padding-right: 20px;
-  font-size: 26px;
-  font-weight: 700;
-}
-
-#mag-icon {
-  color: #53213E;
-  font-size: 26px;
-  background-color: inherit;
-  border: none;
-}
-
-#mag-icon, #delete:hover {
-  cursor: pointer;
-}
-
-.icon {
-  margin-bottom: -27px;
-  height: 70px;
-}
-
-.forecast {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0;
-  background-color: white;
-  margin: 0 10px;
-}
-
-.forecast-each {
-  text-align: center;
-  border-right: 0.5px dashed #555;
-  width: 19.5%;
-}
-
-.forecast-each:last-of-type {
-  border-right: none;
-}
-
-@media only screen and (max-width: 1020px) {
-  #delete {
-    right: -320px;
-  }
-  #mag-icon {
-    margin-right: 5px;
-  }
-  #current-temp {
-    font-size: 90px;
-    bottom: 38px;
-    left: 10%;
-  }
-  #temp-f {
-    margin-top: -123px;
-    left: 41%;
-  }
-  #current-desc {
-    margin-bottom: -64px;
-    font-size: 20px;
-  }
-  #current-desc, #humidity {
-    left: 51%;
-  }
-}
-
-@media only screen and (max-width: 860px) and (min-width: 768px) {
-  #delete {
-    right: -290px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #weather-results .col-md-6:first-of-type {
-    text-align: right;
-  }
-  #weather-results .col-md-6:nth-of-type(2) {
-    text-align: left;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  #current-temp {
-    font-size: 50px;
-    margin-bottom: 0;
-  }
-  .projects .project-each .weather-div form input {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .projects .project-each .weather-div form input {
-    width: 65%;
-  }
-}
-
 /*runform*/
 #paceyourself {
   text-align: center;
@@ -691,6 +463,7 @@ hr {
   padding: 10px 15px;
   margin: 10px 10px;
   display: inline-block;
+  color: #282c34;
 }
 
 #paceyourself input[type="text"] {
@@ -736,49 +509,5 @@ hr {
   color: #E64B15;
   font-family: 'Permanent Marker', cursive;
   font-size: 48px;
-}
-
-@media only screen and (max-width: 600px) {
-  .projects .project-each .weather-div form input {
-    font-size: 1.5rem;
-    width: 65%;
-  }
-  .projects .project-each .weather-div form ::-webkit-input-placeholder {
-    font-size: .8rem;
-  }
-  .projects .project-each .weather-div form :-ms-input-placeholder {
-    font-size: .8rem;
-  }
-  .projects .project-each .weather-div form ::-ms-input-placeholder {
-    font-size: .8rem;
-  }
-  .projects .project-each .weather-div form ::placeholder {
-    font-size: .8rem;
-  }
-  .projects .project-each .weather-div #mag-icon {
-    font-size: 1rem;
-  }
-  .projects .project-each .weather-div #weather-results h4 {
-    font-size: 1rem;
-  }
-  .projects .project-each .weather-div #weather-results .current-weather #city {
-    font-size: 1.2em;
-  }
-  .projects .project-each .weather-div #weather-results .current-weather #current-temp {
-    font-size: 2rem;
-    font-weight: 100;
-    margin-top: 10px;
-  }
-  .projects .project-each .weather-div #weather-results .current-weather #current-temp sup {
-    top: -1.2em;
-    font-size: .8rem;
-  }
-  .projects .project-each .weather-div #weather-results .current-weather #current-desc {
-    margin-top: 0;
-    font-size: 1.6rem;
-  }
-  .projects .project-each .weather-div #weather-results .current-weather #humidity {
-    font-size: 1rem;
-  }
 }
 /*# sourceMappingURL=App.css.map */

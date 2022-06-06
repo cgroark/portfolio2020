@@ -10,8 +10,9 @@ import avTwo from '../images/av-2.png';
 import pse from '../images/pse-1.png';
 import sr522 from '../images/sr522.png';
 import booksOne from '../images/bookends-1.png';
-import WeatherSearch from './WeatherSearch';
+import poSite from '../images/po-staging.png'
 import PaceYourself from './PaceYourself';
+
 require('dotenv').config();
 
 class Projects extends React.Component {
@@ -85,14 +86,7 @@ class Projects extends React.Component {
                                     <h3>Try the live demo below</h3>
                                     <PaceYourself />
                                 </div>
-                                <div>
-                                    <h2 className="project-title">Weather Check</h2>
-                                    <p>Check the weather in your area.</p>
-                                    <div className='tech-section'><p><strong> React, HTML5, CSS3, JavaScript, Regex, Open Weather Map API</strong></p></div>
-                                    <h3>Try the live demo below</h3>
-                                    <WeatherSearch />
-                                    
-                                </div>
+                            
                             </Col>
                            
                         </Row>
@@ -130,11 +124,11 @@ class Projects extends React.Component {
                             <Row>
                             <Col md={6} className="project-each">
                                 <div>
-                                    <h2 className="project-title">PSE Integrated Resource Planning</h2>
-                                    <p>Built for Puget Sound Energy (PSE) to inform the public on ongoing analysis around how a range of potential future outcomes could affect PSE’s ability to meet our customers’ electric and natural gas supply needs. </p>
-                                    <div className='tech-section'><p><strong>Orchard Content Management System (CMS), HTML5, CSS3, JavaScript, JQuery</strong> </p></div>
-                                    <a href="https://pse-irp.participate.online/" target="_blank">Visit live site&nbsp;<i className="fa fa-external-link" aria-hidden="true"></i></a>
-                                    <img  className="sample-image"src={pse} alt="screenshot of a website text" />
+                                    <h2 className="project-title">Participate.Online Splash Page</h2>
+                                    <p>Built for EnviroIssues to highlight design and feature updates to participate.online websites built to communicate updates on public infrastrucutre projects in the Pacific Northwest. </p>
+                                    <div className='tech-section'><p><strong>WordPress (CMS), HTML5, CSS3, JavaScript, JQuery</strong> </p></div>
+                                    <a href="https://participateonline-2-22-staging.azurewebsites.net/" target="_blank">Visit live site&nbsp;<i className="fa fa-external-link" aria-hidden="true"></i></a>
+                                    <img  className="sample-image"src={poSite} alt="screenshot of a website text" />
                                 </div>
                                 <div>
                                     <h2 className="project-title">Sound Transit corridor map</h2>
