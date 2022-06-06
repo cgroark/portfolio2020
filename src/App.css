@@ -455,6 +455,7 @@ img {
 #paceyourself button, #paceyourself label, #paceyourself select, #paceyourself input {
   font-size: 20px;
   font-family: 'Orbitron', sans-serif;
+  -webkit-appearance: none;
 }
 
 #paceyourself button, #paceyourself input[type="submit"] {

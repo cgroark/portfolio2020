@@ -406,6 +406,7 @@ img{
   button, label, select, input{
     font-size: 20px;
     font-family: 'Orbitron', sans-serif;
+    -webkit-appearance: none;
   }
   button, input[type="submit"]{
       background-color: $seaform;
