@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import emailw from '../images/emailw.png';
 import linkedinwhite from '../images/linkedinwhite.png';
 import github1 from '../images/github1.png';
-import resume from '../documents/GroarkColin_Resume_2021.pdf';
+import resume from '../documents/groark_colin_resume-2022.pdf';
 
 class Contact extends React.Component {
     componentDidMount = () =>{
