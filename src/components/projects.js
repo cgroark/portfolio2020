@@ -127,7 +127,7 @@ class Projects extends React.Component {
                                     <h2 className="project-title">Participate.Online Splash Page</h2>
                                     <p>Built for EnviroIssues to highlight design and feature updates to participate.online websites built to communicate updates on public infrastrucutre projects in the Pacific Northwest. </p>
                                     <div className='tech-section'><p><strong>WordPress (CMS), HTML5, CSS3, JavaScript, JQuery</strong> </p></div>
-                                    <a href="https://participateonline-2-22-staging.azurewebsites.net/" target="_blank">Visit live site&nbsp;<i className="fa fa-external-link" aria-hidden="true"></i></a>
+                                    <a href="https://participate.online" target="_blank">Visit live site&nbsp;<i className="fa fa-external-link" aria-hidden="true"></i></a>
                                     <img  className="sample-image"src={poSite} alt="screenshot of a website text" />
                                 </div>
                                 <div>
